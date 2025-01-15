@@ -1,24 +1,23 @@
 #!/bin/bash
 # Author: Jeremy Bell
-# Email: jeremy.bell@nih.gov
 # Date: 2024.11.11
 # Description: This script submits a SLURM job using the dd and SCP commands.
 # It evaluates the time taken to create, transfer, and delete files of various sizes.
 # The results are logged for performance analysis
-# Change source/dest/results files
+# Change source/dest/results files - can be adjusted to work w/o SLURM
 
 #SBATCH --job-name=ddSSd
 #SBATCH --output=ddRRd.out
-#SBATCH --error=ddRRd.err
+#SBATCH --error=ddSSd.err
 #SBATCH --time=00:33:33
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=1G
 
 # Directories for files (CHANGE THESE)
-SOURCE_DIR=/gs1/home/belljs/dev
-TARGET_DIR=/data/scratch/belljs
-RESULTS_FILE=/gs1/home/belljs/dev/round-trip.txt
+SOURCE_DIR=</path/to/source/directory>
+TARGET_DIR=</path/to/target/directory>
+RESULTS_FILE=</path/to/results/file/>round-trip.txt
 
 # Create directories
 mkdir -p $SOURCE_DIR $TARGET_DIR
