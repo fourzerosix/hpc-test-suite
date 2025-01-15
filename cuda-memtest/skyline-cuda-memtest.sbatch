@@ -1,4 +1,9 @@
 #!/bin/bash
+# Author: Jeremy Bell
+# Date: 2024.11.11
+# Description: The script is designed to perform a memory test on GPUs across all nodes in the gpu partition using the cuda_memtest utility.
+# It ensures that GPU memory on each node is validated for errors, which is crucial for maintaining the reliability of GPU resources in a cluster environment.
+
 #SBATCH --job-name=SPHYR43N4
 #SBATCH --partition=gpu         # Specify the GPU partition
 #SBATCH --nodes=ALL             # Request all nodes in the GPU partition
