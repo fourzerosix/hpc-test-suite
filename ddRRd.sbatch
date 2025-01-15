@@ -1,11 +1,10 @@
 #!/bin/bash
 # Author: Jeremy Bell
-# Email: jeremy.bell@nih.gov
 # Date: 2024.11.11
 # Description: This script submits a SLURM job using the dd and rsync commands.
 # It evaluates the time taken to create, transfer, and delete files of various sizes.
 # The results are logged for performance analysis
-# Change source/dest/results files
+# Change source/dest/results files - can be adjusted to work w/o SLURM
 
 #SBATCH --job-name=ddRRd
 #SBATCH --output=ddRRd.out
@@ -18,10 +17,10 @@
 # Load rsync module
 module load rsync/3.2.7-2es3wxe
 
-# Directories for files (CHANGE THESE)
-SOURCE_DIR=/gs1/home/belljs/dev
-TARGET_DIR=/data/scratch/belljs
-RESULTS_FILE=/gs1/home/belljs/dev/round-trip.txt
+# Directories for files (CHANGE THESE - leave trailing backslashes off for rsync playnice - heffalumps n woozles)
+SOURCE_DIR=</path/to/source/directory>
+TARGET_DIR=</path/to/target/directory>
+RESULTS_FILE=</path/to/results/file/>round-trip.txt
 
 # Create directories
 mkdir -p $SOURCE_DIR $TARGET_DIR
