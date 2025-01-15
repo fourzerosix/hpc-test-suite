@@ -4,7 +4,7 @@
 # Date: 2024.11.11
 # Description: This script provides a comprehensive check of the core functionalities of our miniconda3 setup.
 # (i.e., basic conda functionality, environment management, python execution, package management, and cleanup.
-# There are additional tests covering a range of common scientific and data analysis libraries
+# There are additional tests covering a range of common scientific and data analysis libraries - this can be adjusted to run w/o SLURM
 
 #SBATCH --job-name=N!NM@D@        # Job name
 #SBATCH --output=conda_test.log   # Output log file
