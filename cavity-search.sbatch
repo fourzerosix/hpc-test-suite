@@ -1,15 +1,14 @@
 #!/bin/bash
 #
-# Author: Dolphin Whisperer
-# Email: jeremy.bell@nih.gov
+# Author: Jeremy Bell
 # Created: 2024-12-21
-# Description: This script performs 40+ common admin/user commands and records the output to a log file
+# Description: This script performs 40+ common admin/user commands and records the output to a log file - can be adjusted to work w/o SLURM
 #
 #SBATCH --job-name=D33P_BR3@TH
 #SBATCH --output=cavity-search.log
 #SBATCH --ntasks=1
 #SBATCH --time=00:10:00
-#SBATCH --partition=int
+#SBATCH --partition=<partition_name>
 
 # Create a temporary directory for benchmarking
 WORKDIR=$(mktemp -d)
