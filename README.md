@@ -5,14 +5,16 @@
 ---
 
 ## Summary
-- This is a collection of applications/test-cases/benchmarking/stress-testing software for Linux HPC clusters/systems. All of these can be cloned/forked and installed within your local environment (or your `/home` dir) - It integrates with various aspects of a given cluster/system by:
+- This is a collection of applications/test-cases/benchmarking/stress-testing software for Linux HPC clusters/systems. All of these can be cloned/forked and installed within your local environment (or your `/home` dir)
+
+- It integrates with various aspects of a given cluster/system by:
   - Loading *[Lmod](https://github.com/TACC/Lmod)* modules
   - Installed with *[Spack](https://github.com/spack/spack)* and
   - Submitting *[SLURM](https://github.com/SchedMD/slurm)* jobs (via *[sbatch](https://slurm.schedmd.com/sbatch.html)* scripts)
 
-In an attempt to exercise multiple facets of a cluster simultaneously (you'll need to adjust various aspects of scripts to fit your needs - sbatch scripts can generally be run as shell scripts w/o the header or srun directive).
+- In an attempt to exercise multiple facets of a cluster simultaneously (you'll need to adjust various aspects of scripts to fit your needs - sbatch scripts can generally be run as shell scripts w/o the header or srun directive).
 
-The test suite below is comprised of administrative applications and is meant to be iterative, scalable, and contributed to by team members with varying skill sets and experience.
+- The test suite below is comprised of administrative applications and is meant to be iterative, scalable, and contributed to by team members with varying skill sets and experience.
 
 > [!WARNING]
 > **This test suite should only be run when the cluster is not in production (e.g. during a planned maintenance outage).**
