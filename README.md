@@ -1,13 +1,16 @@
 # hpc-test-suite
 
-*Benchmarking/Stress-Testing Application Suite for Linux HPC clusters*
+*A Benchmarking/Stress-Testing Application Suite for Linux HPC clusters*
 
 ---
 
 ## Summary
-This is a collection of applications/test-cases/benchmarking/stress-testing software for Linux HPC clusters. It integrates with various aspects of the cluster by loading *Lmod* modules installed with *Spack* and submitting *SLURM* jobs via *sbatch* scripts in an attempt to exercise multiple facets of the cluster simultaneously (you'll need to adjust various aspects of scripts to fit your needs.
+- This is a collection of applications/test-cases/benchmarking/stress-testing software for Linux HPC clusters. It integrates with various aspects of a given cluster by:
+  - Loading *Lmod* modules
+  - Installed with *Spack* and
+  - Submitting *SLURM* jobs via *sbatch* scripts
 
-It is assumed that cluster power-users will test the most heavily utilized cluster applications (e.g., CryoSPARC, RELION, Snakemake, Genomics pipelines, etc. etc.).
+In an attempt to exercise multiple facets of a cluster simultaneously (you'll need to adjust various aspects of scripts to fit your needs - sbatch scripts can generally be run as shell scripts w/o the header or srun directive).
 
 The test suite below is comprised of administrative applications and is meant to be iterative, scalable, and contributed to by team members with varying skill sets and experience.
 
