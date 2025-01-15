@@ -44,9 +44,9 @@ The test suite below is comprised of administrative applications and is meant to
 ## Prerequisites
 - The Skyline cluster maintenance should be, for the most part, completed (*brought down, maintenance items completed, brought up, net/auth/comm verified etc. etc.*)
 - Access to the NIAID GitHub infrastructure/repo
-- Clone the [Skyline Test Suite Repository](https://github.niaid.nih.gov/rmllinux/skyline-test-suite/tree/main) and change into the new directory:  
+- Clone the [hpc-test-suite repo](https://github.com/fourzerosix/hpc-test-suite.git) and change into the new directory:  
    ```bash
-   git clone git@github.niaid.nih.gov:rmllinux/skyline-test-suite.git;cd skyline-test-suite
+   git clone https://github.com/fourzerosix/hpc-test-suite.git;cd hpc-test-suite
    ```
 
 ---
