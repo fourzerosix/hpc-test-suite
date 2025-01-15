@@ -2,7 +2,8 @@
 # Author: Jeremy Bell
 # Email: jeremy.bell@nih.gov
 # Date: 2024.11.01
-# Description: This script 
+# Description: This script tests SLURM's ability to execute a job array, verifies parallel execution, and node allocation
+# It can be adjusted to view the impact of submitting numerous, small jobs at once.
 
 #SBATCH --job-name=N!GHT_N!GHT
 #SBATCH --output=brain-stew_output_%A_%a.txt
