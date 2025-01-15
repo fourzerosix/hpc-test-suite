@@ -15,7 +15,7 @@
 #SBATCH --mem=1G
 
 # Load rsync module
-module load rsync/3.2.7-2es3wxe
+ml rsync
 
 # Directories for files (CHANGE THESE - leave trailing backslashes off for rsync playnice - heffalumps n woozles)
 SOURCE_DIR=</path/to/source/directory>
