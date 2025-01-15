@@ -1,5 +1,5 @@
 #!/bin/bash
-# Author: Dolphin Whisperer
+# Author: Jeremy Bell
 # Date: 2024.12.05
 # Duration: <5 min
 # Description: This script runs IOR (Interleaved Or Random) benchmarks to evaluate the I/O performance.
