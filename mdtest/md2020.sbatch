@@ -1,6 +1,5 @@
 #!/bin/bash
-# Author: Dolphin Whisperer
-# Email: jeremy.bell@nih.gov
+# Author: Jeremy Bell
 # Date: 2024.12.07
 # Duration: ~5 min/server/8 GPUs
 # Description: This script tests the metadata performance of the underlying file system on a cluster, which can reveal latency and throughput for creating, reading, and linking files and directories.
@@ -13,13 +12,11 @@
 #SBATCH --ntasks=1                
 #SBATCH --cpus-per-task=1       
 #SBATCH --time=00:04:44          
-#SBATCH --partition=all      
-#SBATCH --mail-type=END,FAIL    
-#SBATCH --mail-user=jeremy.bell@nih.gov
+#SBATCH --partition=all
 
 # Load necessary modules
-ml openmpi/5.0.3-w3bgmn3
-ml ior/3.3.0-h5e6u5n
+ml openmpi
+ml ior
 
 # Define/Create test dir
 TEST_DIR=./out/mdtest_run_$(date +%S)
