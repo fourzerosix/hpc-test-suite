@@ -1,14 +1,19 @@
 #!/bin/bash
+# Author: Jeremy Bell
+# Date: 2024.11.11
+# Description: The script tests the CPU performance (--cpuclock-test) on each node individually.
+# Useful for identifying potential discrepancies or performance issues across nodes.
+
 #SBATCH --job-name=P3R$!$T3NC3_0F_M3M0RY
 #SBATCH --output=fio_cpuclock_test-%j.out
 #SBATCH --error=fio_cpuclock_test-%j.err
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --time=00:30:00
-#SBATCH --partition=default
+#SBATCH --partition=<partition_name>
 
 # Load the fio module
-module load ml fio/3.36-63qn7zc
+ml fio
 
 # Get the list of nodes in the cluster
 NODELIST=$(scontrol show hostname $SLURM_NODELIST)
@@ -26,7 +31,7 @@ for NODE in $NODELIST; do
 #SBATCH --partition=default
 #SBATCH --nodelist=${NODE}
 
-module load ml fio/3.36-63qn7zc
+ml fio
 fio --cpuclock-test
 EOF
 
