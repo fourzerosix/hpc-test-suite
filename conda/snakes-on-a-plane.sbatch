@@ -15,7 +15,7 @@
 #SBATCH --cpus-per-task=1         # CPUs per task
 
 # Load the Miniconda3 module
-module load miniconda3
+ml miniconda3
 
 # Record conda version
 echo "Conda Version:"
