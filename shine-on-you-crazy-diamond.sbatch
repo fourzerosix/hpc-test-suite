@@ -1,6 +1,5 @@
 #!/bin/bash
-# Author: Dolphin Whisperer
-# Email: jeremy.bell@nih.gov
+# Author: Jeremy Bell
 # Date: 2024.12.12
 # Duration: <1 min#
 # Description: The script is an SBATCH job script designed to generate multiple .csv files on a cluster, each containing a specified number of rows and 100 fields per row.
