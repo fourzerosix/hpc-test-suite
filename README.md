@@ -1,14 +1,14 @@
 # hpc-test-suite
 
-*A Benchmarking/Stress-Testing Application Suite for Linux HPC clusters*
+*A Benchmarking/Stress-Testing Application Suite for Linux HPC clusters/systems*
 
 ---
 
 ## Summary
-- This is a collection of applications/test-cases/benchmarking/stress-testing software for Linux HPC clusters. It integrates with various aspects of a given cluster by:
-  - Loading *Lmod* modules
-  - Installed with *Spack* and
-  - Submitting *SLURM* jobs via *sbatch* scripts
+- This is a collection of applications/test-cases/benchmarking/stress-testing software for Linux HPC clusters/systems. All of these can be cloned/forked and installed within your local environment (or your `/home` dir) - It integrates with various aspects of a given cluster/system by:
+  - Loading *[Lmod](https://github.com/TACC/Lmod)* modules
+  - Installed with *[Spack](https://github.com/spack/spack)* and
+  - Submitting *[SLURM](https://github.com/SchedMD/slurm)* jobs (via *[sbatch](https://slurm.schedmd.com/sbatch.html)* scripts)
 
 In an attempt to exercise multiple facets of a cluster simultaneously (you'll need to adjust various aspects of scripts to fit your needs - sbatch scripts can generally be run as shell scripts w/o the header or srun directive).
 
