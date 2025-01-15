@@ -4,8 +4,7 @@
 # Date: 2024.12.12
 # Duration: <1 min#
 # Description: The script is an SBATCH job script designed to generate multiple .csv files on a cluster, each containing a specified number of rows and 100 fields per row.
-# It logs both the time taken to create each file and the total execution time to the SLURM output file.
-# Home: https://github.niaid.nih.gov/rmllinux/skyline-test-suite/edit/main/shine-on-you-crazy-diamond.sh
+# It logs both the time taken to create each file and the total execution time to the SLURM output file - can be adjusted to work w/o SLURM
 
 #SBATCH --job-name=GL@$$Y
 #SBATCH --output=shine-on-slurm-out-%j.log
