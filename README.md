@@ -47,7 +47,7 @@
 ---
 
 ## Prerequisites
-- The Skyline cluster maintenance should be, for the most part, completed (*brought down, maintenance items completed, brought up, net/auth/comm verified etc. etc.*)
+- The cluster cluster maintenance should be, for the most part, completed (*brought down, maintenance items completed, brought up, net/auth/comm verified etc. etc.*)
 - Access to the NIAID GitHub infrastructure/repo
 - Clone the [hpc-test-suite repo](https://github.com/fourzerosix/hpc-test-suite.git) and change into the new directory:  
    ```bash
@@ -68,11 +68,11 @@
 - http://broadinstitute.github.io/picard/command-line-overview.html#MarkDuplicates
 - *Duration: ~45 min*
 
-This script uses Picard's MarkDuplicates tool to identify and remove duplicate reads in sequencing data. It loops through input BAM files, checks if the corresponding output file already exists, and submits individual SLURM jobs to process each file in parallel. Picard is installed via Apptainer on Skyline, which the test-suite script calls.
+This script uses Picard's MarkDuplicates tool to identify and remove duplicate reads in sequencing data. It loops through input BAM files, checks if the corresponding output file already exists, and submits individual SLURM jobs to process each file in parallel. Picard is installed via Apptainer on cluster, which the test-suite script calls.
 
 ##### Run:
    ```bash
-   chmod u+x picard-remove-duplicates/skyline-picard-MarkDuplicates.sh && cp -rp ../input/ picard-remove-duplicates/ && ./picard-remove-duplicates/skyline-picard-MarkDuplicates.sh
+   chmod u+x picard-remove-duplicates/cluster-picard-MarkDuplicates.sh && cp -rp ../input/ picard-remove-duplicates/ && ./picard-remove-duplicates/cluster-picard-MarkDuplicates.sh
    ```
 
 ##### Cleanup:
@@ -119,7 +119,7 @@ It does this by running a workload designed to heavily utilize GPU resources and
 
 ##### Run:
    ```bash
-   sbatch gpu-burn/skyline-gpu-burn.sbatch
+   sbatch gpu-burn/cluster-gpu-burn.sbatch
    ```
 
 ##### Cleanup:
@@ -156,10 +156,10 @@ This script runs IOR (Interleaved Or Random) benchmarks to evaluate the I/O perf
 
 ##### Run:
    ```bash
-   sbatch ior/skyline-ior-single-node.sbatch
+   sbatch ior/cluster-ior-single-node.sbatch
    ```
    ```bash
-   sbatch ior/skyline-ior-distributed.sbatch
+   sbatch ior/cluster-ior-distributed.sbatch
    ```
 
 ##### Cleanup:
@@ -182,7 +182,7 @@ This script tests the metadata performance of the underlying file system on a cl
 
 ##### Run:
    ```bash
-   sbatch mdtest/skyline-mdtest.sbatch
+   sbatch mdtest/cluster-mdtest.sbatch
    ```
 
 ##### Cleanup:
@@ -207,7 +207,7 @@ stress-ng will stress test a computer system in various select able ways. It was
 
 ##### Run:
    ```bash
-   sbatch skyline-stress-ng-hare.sbatch
+   sbatch cluster-stress-ng-hare.sbatch
 
    ```
 
@@ -231,7 +231,7 @@ Stressful Application Test (or stressapptest, its unix name) is a memory interfa
 
 ##### Run:
    ```bash
-   sbatch skyline-stressapptest.sbatch
+   sbatch cluster-stressapptest.sbatch
    ```
 
 ##### Cleanup:
@@ -255,7 +255,7 @@ This script runs 26 separate MPI-based tests. Including Point-to-Point MPI tests
 
 ##### Run:
    ```bash
-   sbatch skyline-osumb.sbatch
+   sbatch cluster-osumb.sbatch
    ```
 ##### Cleanup:
    ```bash
@@ -281,7 +281,7 @@ Fio spawns a number of threads or processes doing a particular type of I/O actio
 
 ##### Run:
    ```bash
-   sbatch skyline-fio.sbatch
+   sbatch cluster-fio.sbatch
    ```
 ##### Cleanup:
    ```bash
@@ -303,7 +303,7 @@ This software tests GPU memory for hardware errors and soft errors using CUDA (o
 
 ##### Run:
    ```bash
-   sbatch skyline-cuda-memtest.sbatch
+   sbatch cluster-cuda-memtest.sbatch
    ```
 ##### Cleanup:
    ```bash
@@ -341,7 +341,7 @@ The MPI-Testsuite may be run with an arbitrary number of processes. It runs a va
 
 ### ddRRd
 - *Duration: ~30 minutes*
-- https://github.niaid.nih.gov/rmllinux/skyline-test-suite/blob/main/ddRRd.sbatch
+- https://github.niaid.nih.gov/rmllinux/cluster-test-suite/blob/main/ddRRd.sbatch
 
 This script submits a SLURM job using the dd/rsync commands - it evaluates the time taken to create, transfer, and delete files of various sizes - the results are logged for performance analysis.
 
@@ -379,7 +379,7 @@ This script submits a SLURM job using the dd/rsync commands - it evaluates the t
 
 ### ddSSd
 - *Duration: ~1 minute*
-- https://github.niaid.nih.gov/rmllinux/skyline-test-suite/blob/main/brain-stew.sbatch
+- https://github.niaid.nih.gov/rmllinux/cluster-test-suite/blob/main/brain-stew.sbatch
 
 ##### Run:
    ```bash
@@ -397,7 +397,7 @@ This script submits a SLURM job using the dd/rsync commands - it evaluates the t
 
 ### Brain Stew
 - *Duration: ~1 minute*
-- https://github.niaid.nih.gov/rmllinux/skyline-test-suite/blob/main/brain-stew.sbatch
+- https://github.niaid.nih.gov/rmllinux/cluster-test-suite/blob/main/brain-stew.sbatch
 
 ##### Run:
    ```bash
@@ -421,7 +421,7 @@ This script tests all available R packages provided by the system can load indiv
 
 ##### Run:
    ```bash
-   ./skyline-R-test.sh
+   ./cluster-R-test.sh
    ```
 ##### Cleanup:
    ```bash
