@@ -16,6 +16,10 @@
 
 - The test suite below is comprised of administrative applications and is meant to be iterative, scalable, and contributed to by team members with varying skill sets and experience.
 
+- If you notice missing details:  
+| ⓘ NOTE: _In the spirit of m̷̈ͅị̶̉ń̴ͅȋ̵͜m̵̺̎ǔ̶̬m̵͋͜ ̸̟͊v̷͕̎i̶̮͘a̴̛̳b̶̺̔ḽ̶͐ĕ̶͙ ̸͎̎p̸̭̈ŕ̸̥ô̸̺d̷͈̓ú̶͙c̵̝͒ẗ̶̤́, we will fix it later._|
+| :--- |
+
 > [!WARNING]
 > **This test suite should only be run when the cluster/system is not in production (e.g. during a planned maintenance outage).**
 
